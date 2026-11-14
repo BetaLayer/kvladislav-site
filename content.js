@@ -3,6 +3,7 @@ window.SITE = {
   name: 'kvladislav',
   email: 'v.kurzanov24@gmail.com',
   ru: {
+    zeiLogoLabel: 'Zei — рваный фотопортрет Блюмы Зейгарник с расходящимися чернильными волнами', zeiPause: 'Приостановить анимацию Zei', zeiPlay: 'Воспроизвести анимацию Zei',
     pageTitle: 'kvladislav — матстатистика, ACT и Zei',
     description: 'Личный сайт kvladislav: репетиторство по математической статистике, обучение психотерапии и работа над Zei — ИИ-ассистентом медицинского психолога.',
     navLabel: 'Основная навигация', skip: 'К содержимому', navAbout: 'Обо мне', navDirections: 'Направления', navProject: 'Zei', navContact: 'Связаться',
@@ -41,6 +42,7 @@ window.SITE = {
     actContactTitle: 'Оставаться на связи', actContactText: 'Для знакомства или профессионального сотрудничества можно написать мне на почту.', actContactCta: 'Написать мне', actStatusShort: 'Практика в подготовке',
   },
   en: {
+    zeiLogoLabel: 'Zei — a torn photographic portrait of Bluma Zeigarnik with expanding ink waves', zeiPause: 'Pause the Zei animation', zeiPlay: 'Play the Zei animation',
     pageTitle: 'kvladislav — statistics, ACT & Zei',
     description: 'The personal website of kvladislav: mathematical statistics tutoring, psychotherapy training, and Zei — an AI assistant for clinical psychologists.',
     navLabel: 'Main navigation', skip: 'Skip to content', navAbout: 'About', navDirections: 'What I do', navProject: 'Zei', navContact: 'Get in touch', homeLabel: 'kvladislav — home', languageLabel: 'Website language',

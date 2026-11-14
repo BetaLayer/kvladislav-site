@@ -35,6 +35,14 @@
     applyLanguage(button.dataset.language);
     try { const url = new URL(location.href); url.searchParams.set('lang', language); history.replaceState(null, '', url); } catch {}
   }));
+  const zeiToggle = document.querySelector('[data-zei-toggle]');
+  zeiToggle?.addEventListener('click', () => {
+    const paused = zeiToggle.closest('.zei-art').classList.toggle('is-paused');
+    const key = paused ? 'zeiPlay' : 'zeiPause';
+    zeiToggle.dataset.i18nAria = key;
+    zeiToggle.setAttribute('aria-label', site[language][key]);
+
+  });
   document.querySelectorAll('[data-topic]').forEach(button => button.addEventListener('click', () => {
     topic = button.dataset.topic;
     document.querySelectorAll('[data-topic]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));

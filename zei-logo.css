@@ -1,0 +1,26 @@
+/* Photographic Zei identity: torn edge, planar sway, fine ink waves. */
+.zei-art{display:block;aspect-ratio:1;max-height:none;padding:26px;background:#eeeee7;color:#252b25;container-type:inline-size;isolation:isolate}
+.zei-art-top{position:relative;z-index:3;align-items:center}
+.zei-art>p{position:absolute;left:26px;right:26px;bottom:22px;font-size:8px;letter-spacing:1.2px}
+.zei-logo-stage{position:absolute;inset:0;pointer-events:none}
+.zei-waves{position:absolute;left:2%;top:0;width:96%;height:88%;overflow:visible;color:#263448}
+.zei-wave{transform-box:view-box;transform-origin:250px 300px;animation:zei-ink-wave 5.6s linear infinite;opacity:0}
+.zei-wave:nth-of-type(1){animation-delay:0s;--angle:-2deg}
+.zei-wave:nth-of-type(2){animation-delay:-1.4s;--angle:1deg}
+.zei-wave:nth-of-type(3){animation-delay:-2.8s;--angle:-.8deg}
+.zei-wave:nth-of-type(4){animation-delay:-4.2s;--angle:2deg}
+.zei-portrait-sway{position:absolute;left:24%;top:13%;width:52%;height:62%;transform-origin:50% 55%;animation:zei-portrait-sway 5.6s ease-in-out infinite;z-index:1}
+.zei-portrait{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(6px 10px 10px #1e231c24);user-select:none;-webkit-user-drag:none}
+.zei-print-wordmark{position:absolute;top:75%;left:0;width:100%;text-align:center;z-index:2;font-family:Georgia,'Times New Roman',serif;font-size:82px;font-size:18.3cqw;font-weight:700;line-height:1;letter-spacing:-.055em}
+.zei-symbol{font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:-4px}
+.zei-motion-toggle{display:grid;place-items:center;width:36px;height:36px;margin:-8px -8px -8px 0;padding:0;border:0;border-radius:50%;background:transparent;color:#5a6256}
+.zei-motion-toggle:hover{background:#252b250a}
+.zei-play-icon{display:none}
+.zei-art.is-paused .zei-pause-icon{display:none}
+.zei-art.is-paused .zei-play-icon{display:block}
+.zei-art.is-paused .zei-wave,.zei-art.is-paused .zei-portrait-sway{animation-play-state:paused}
+@keyframes zei-portrait-sway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+@keyframes zei-ink-wave{0%{transform:scale(.68) rotate(var(--angle));opacity:0}12%{opacity:.55}48%{opacity:.43}80%{opacity:.19}100%{transform:scale(1.14) rotate(var(--angle));opacity:0}}
+@media(max-width:800px) and (min-width:621px){.zei-art{padding:18px}.zei-art>p{left:18px;right:18px;bottom:16px;font-size:6px;letter-spacing:.6px}}
+@media(max-width:620px){.zei-art>p{bottom:12px;font-size:7px;letter-spacing:.8px}}
+@media(prefers-reduced-motion:reduce){.zei-motion-toggle{display:none}.zei-wave{animation:none;opacity:0}.zei-wave:nth-of-type(2){transform:scale(.82);opacity:.25}.zei-wave:nth-of-type(3){transform:scale(1.02);opacity:.13}.zei-portrait-sway{animation:none;transform:rotate(-2deg)}}
